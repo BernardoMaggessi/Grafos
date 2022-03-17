@@ -5,18 +5,21 @@ import Graph.utils.Grafo;
 public class Program {
     public static void main(String[] args) {
         Grafo<String> grafo = new Grafo<String>();
-        grafo.addVertice("João");
-        grafo.addVertice("Lorenzo");
-        grafo.addVertice("Pedro");
-        grafo.addVertice("Kleber");
-        grafo.addVertice("Phelipe");
+        grafo.adicionarVertice("João");
+        grafo.adicionarVertice("Lorenzo");
+        grafo.adicionarVertice("Creuza");
+        grafo.adicionarVertice("Créber");
+        grafo.adicionarVertice("Cráudio");
 
-        grafo.addAresta(2.0,"João", "Lorenzo");
-        grafo.addAresta(3.0,"Lorenzo", "Kleber");
-        grafo.addAresta(1.0, "Kleber", "Pedro");
-        grafo.addAresta(2.0,"João", "Pedro");
-        grafo.addAresta(3.0, "Pedro", "Phelipe");
-        grafo.addAresta(2.0, "Phelipe", "Kleber");
+        grafo.adicionarAresta(2.0, "João", "Lorenzo");
+        grafo.adicionarAresta(3.0, "Lorenzo", "Créber");
+        grafo.adicionarAresta(1.0, "Créber", "Creuza");
+        grafo.adicionarAresta(1.0, "João", "Creuza");
+        grafo.adicionarAresta(3.0, "Cráudio", "João");
+        grafo.adicionarAresta(2.0, "Cráudio", "Lorenzo");
+
+
+        grafo.buscaEmLargura();
     }
 
 
